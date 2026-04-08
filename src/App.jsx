@@ -3,7 +3,7 @@ import Header from './components/Header';
 import ProductList from './components/ProductList';
 import { products } from './data/products';
 import './styles/App.css';
-import { useState } from 'react';
+import CartSidebar from './components/CartSidebar';
 function App() {
   // TODO: Add state for cart items (array)
   // Hint: const [cart, setCart] = useState([]);
@@ -63,12 +63,13 @@ const getTotalItems = () => {
 
   return (
     <div className="app">
+
       <Header 
   cartItemCount={getTotalItems()}
   onCartClick={toggleCart}
 />
-      <main className="main-content">
-        <ProductList products={products} />
+    <main className="main-content">
+       
       </main>
       <ProductList 
   products={products} 
