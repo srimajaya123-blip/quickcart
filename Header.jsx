@@ -8,6 +8,9 @@ function Header() {
         <h1 className="header-title">🛒 QuickCart</h1>
         <p className="header-subtitle">Your one-stop shop for everything</p>
       </div>
+      <button onClick={onCartClick}>
+  🛒 {cartItemCount}
+</button>
     </header>
   );
 }
