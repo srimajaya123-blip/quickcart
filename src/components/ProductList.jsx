@@ -2,7 +2,7 @@ import React from 'react';
 import ProductCard from './ProductCard';
 import '../styles/ProductList.css';
 
-function ProductList({ products }) {
+function ProductList({ products, onAddToCart }) {
   return (
     <div className="product-list">
       <h2 className="section-title">Our Products</h2>
@@ -10,7 +10,18 @@ function ProductList({ products }) {
         {products.map((product) => (
           <ProductCard key={product.id} product={product} />
         ))}
+        <ProductCard 
+  key={product.id}
+  product={product}
+  onAddToCart={onAddToCart}
+/>
       </div>
+      <button 
+  className="add-to-cart-btn"
+  onClick={() => onAddToCart(product)}
+>
+  Add to Cart
+</button>
     </div>
   );
 }
