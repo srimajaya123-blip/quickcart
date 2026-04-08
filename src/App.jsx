@@ -7,7 +7,7 @@ import './styles/App.css';
 function App() {
   return (
     <div className="app">
-      <Header />
+      <Header QuickCart />
       <main className="main-content">
         <ProductList products={products} />
       </main>
